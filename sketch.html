@@ -1,0 +1,67 @@
+    <head>
+
+        <title>Etch-A-Sketch</title>
+      
+      <link href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="style.css">
+    
+    </head>
+    
+    <body>
+        <div id='container'>
+            <div id='titleContainer'>
+                <h1> Etch-a-Sketch!</h1>
+            </div>
+            <div id='canvasContainer'>
+                <div id='canvas'></div>
+            </div>
+            <div id='controlContainer'>
+              <div id='clear'></div>
+              <div id='size'></div>
+            </div>
+        </div>  
+    </body>
+
+    
+<script>
+const canvas = document.querySelector('#canvas')
+console.log(canvas)
+let gridArr = [];
+
+function gridSize(num) {
+    let mcGriddle = 100/num;
+    for (let x=0;x<num;x++) {
+        gridArr.push(mcGriddle + "% ")
+    } 
+
+    canvas.style.cssText = `grid-template-rows:${gridArr.join('')}; grid-template-columns:${gridArr.join('')}`;
+ 
+}
+
+function divGen() {
+    const grid = document.createElement('div');
+    grid.classList.add('grid');
+    canvas.appendChild(grid);
+    
+    grid.onmouseover = function(){
+      grid.style.cssText = "background-color: black";
+    };
+}
+
+function gridGen(num) {
+
+    gridSize(num);
+
+    for (let x = 1; x <= num*num; x++) {
+        divGen();
+    }
+
+    
+
+}
+
+gridGen(100)
+
+
+
+</script>

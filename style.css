@@ -1,0 +1,80 @@
+body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#container {
+    min-height: 90vh;
+    min-width: 45vw;
+    background-color: crimson;
+    border: 5px solid black;
+    border-radius: 45px;
+    padding: 0px 10px 16px 10px;
+    box-shadow: 3px 3px 5px 2px grey;
+
+}
+
+#titleContainer {
+    text-align: center;
+    font-family: Yesteryear;
+    font-size: 24px;
+    border-radius: 45px;
+    color: #E6BE7E;
+    text-shadow: 1px 2px 2px #000000;
+}
+
+#controlContainer {
+    background-color: crimson;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 45px;
+}
+
+#clear {
+  background-color: white;
+  border: 3.2px dotted lightgrey;
+  border-radius: 50%;
+  height:100px;
+  width: 100px;
+  box-shadow: 2px 2px 6px 2px black;
+}
+
+#size {
+  background-color: white;
+  border: 3.2px dotted lightgrey;
+  border-radius: 50%;
+  height:100px;
+  width: 100px;
+  box-shadow: 2px 2px 6px 2px black;
+}
+
+#canvasContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#canvas {
+    display: grid;
+    background-color: #B8B5B3;
+    outline: 2px solid black;
+    margin: 0px 72px 12px;
+    padding: 0.5px;
+    width: 530px;
+    height: 530px;
+}
+
+
+.fillIn {
+    background-color: black;
+}
+
+.grid {
+    border: 0.5px solid black;
+    border-radius: 50%;
+    background-color: #B8B5B3;
+}
